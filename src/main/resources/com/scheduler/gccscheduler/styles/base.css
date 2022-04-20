@@ -1,0 +1,12 @@
+.button {
+    -fx-background-color: #cc0000;
+    -fx-text-fill: white;
+}
+
+button.active {
+    -fx-background-color: #4369f0
+}
+
+.button.img {
+    -fx-background-color: white;
+}

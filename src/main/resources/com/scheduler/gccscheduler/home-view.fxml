@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@styles/base.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scheduler.gccscheduler.HomeView">
+    <children>
+        <Label layoutX="674.0" layoutY="5.0" text="From the Flamingoes" textFill="#e747ff" />
+        <Label layoutX="14.0" layoutY="5.0" fx:id="pageLabel"/>
+      <MenuButton layoutX="672.0" layoutY="26.0" mnemonicParsing="false" text="My Account">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Log Out" />
+          <MenuItem mnemonicParsing="false" onAction="#onEditButtonClick" text="Edit Account" />
+        </items>
+      </MenuButton>
+
+    </children>
+
+</AnchorPane>
