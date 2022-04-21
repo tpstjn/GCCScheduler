@@ -41,4 +41,13 @@ public class HomeView {
         stage.setScene(scene);
         stage.show();
     }
+
+    @FXML
+    public void onCreateScheduleClick(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("scheduler-view.fxml")));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
