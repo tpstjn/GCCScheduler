@@ -19,7 +19,7 @@
       <TextField layoutX="315.0" layoutY="166.0" promptText="Username" />
       <PasswordField layoutX="315.0" layoutY="197.0" promptText="Password" />
       <Button layoutX="482.0" layoutY="195.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" text="Register" />
-      <Label layoutX="358.0" layoutY="131.0" text="Register">
+      <Label layoutX="358.0" layoutY="135.0" text="Register">
          <font>
             <Font size="16.0" />
          </font>
