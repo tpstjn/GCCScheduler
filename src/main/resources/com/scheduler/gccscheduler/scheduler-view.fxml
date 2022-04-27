@@ -1,20 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 <AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@styles/base.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.scheduler.gccscheduler.SchedulerView">
     <children>
         <Label layoutX="674.0" layoutY="5.0" text="From the Flamingoes" textFill="#e747ff" />
-        <Label layoutX="14.0" layoutY="5.0" fx:id="pageLabel"/>
+        <Label fx:id="pageLabel" layoutX="14.0" layoutY="5.0" />
         <MenuButton layoutX="672.0" layoutY="26.0" mnemonicParsing="false" text="My Account">
             <items>
                 <MenuItem mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Log Out" />
                 <MenuItem mnemonicParsing="false" onAction="#onEditButtonClick" text="Edit Account" />
             </items>
         </MenuButton>
+      <SplitPane dividerPositions="0.30167364016736403" layoutY="57.0" prefHeight="440.0" prefWidth="799.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="437.0" prefWidth="267.0">
+               <children>
+                  <Label layoutX="64.0" text="Search Courses">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="45.0" layoutY="30.0" promptText="Course Name" />
+                  <TextField layoutX="44.0" layoutY="66.0" promptText="Course Code" />
+                  <Spinner layoutX="137.0" layoutY="130.0" prefHeight="25.0" prefWidth="65.0">
+                      <valueFactory>
+                          <SpinnerValueFactory.IntegerSpinnerValueFactory max="24" min="0" />
+                      </valueFactory>
+                  </Spinner>
+                  <Spinner layoutX="51.0" layoutY="131.0" prefHeight="25.0" prefWidth="69.0">
+                      <valueFactory>
+                          <SpinnerValueFactory.IntegerSpinnerValueFactory max="24" min="0" />
+                      </valueFactory>
+                  </Spinner>
+                  <Label layoutX="58.0" layoutY="103.0" text="Start Hour - End Hour" />
+                  <Label layoutX="126.0" layoutY="134.0" text="-" />
+                  <Label layoutX="81.0" layoutY="164.0" text="Credit Hours" />
+                  <Spinner layoutX="71.0" layoutY="192.0" prefHeight="25.0" prefWidth="95.0" />
+                  <Label layoutX="95.0" layoutY="228.0" text="Meets: " />
+                  <CheckBox layoutX="23.0" layoutY="251.0" mnemonicParsing="false" text="Monday" />
+                  <CheckBox layoutX="130.0" layoutY="252.0" mnemonicParsing="false" text="Tuesday" />
+                  <CheckBox layoutX="23.0" layoutY="284.0" mnemonicParsing="false" text="Wednesday" />
+                  <CheckBox layoutX="130.0" layoutY="285.0" mnemonicParsing="false" text="Thursday" />
+                  <CheckBox layoutX="86.0" layoutY="314.0" mnemonicParsing="false" text="Friday" />
+                  <Button layoutX="89.0" layoutY="346.0" mnemonicParsing="false" text="Search" />
+                  <Button layoutX="18.0" layoutY="387.0" mnemonicParsing="false" text="I'm Feeling Lucky" />
+                  <Button layoutX="148.0" layoutY="386.0" mnemonicParsing="false" text="By Profile" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="437.0" prefWidth="553.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="219.0" prefWidth="551.0" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView prefHeight="214.0" prefWidth="551.0">
+                                <columns>
+                                  <TableColumn prefWidth="96.66664135456085" text="Course Code" />
+                                  <TableColumn minWidth="0.0" prefWidth="132.0" text="Course Name" />
+                                    <TableColumn prefWidth="160.00003051757812" text="Meets" />
+                                    <TableColumn prefWidth="75.0" text="Building" />
+                                    <TableColumn prefWidth="75.0" text="E/C" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
 
     </children>
 
