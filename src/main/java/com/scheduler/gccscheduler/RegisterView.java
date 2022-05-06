@@ -11,6 +11,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
+import static com.scheduler.gccscheduler.App.fxmlval;
+import static com.scheduler.gccscheduler.App.stageval;
+
 public class RegisterView {
     @FXML
     private Stage stage;
@@ -23,6 +26,8 @@ public class RegisterView {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        fxmlval.add("login-view.fxml");
+        stageval.add(stage);
         stage.show();
     }
 
@@ -32,6 +37,8 @@ public class RegisterView {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        fxmlval.add("home-view.fxml");
+        stageval.add(stage);
         stage.show();
     }
 
@@ -41,6 +48,8 @@ public class RegisterView {
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        fxmlval.add("home-view.fxml");
+        stageval.add(stage);
         stage.show();
     }
 }

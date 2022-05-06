@@ -7,7 +7,7 @@
     <children>
         <Label layoutX="674.0" layoutY="5.0" text="From the Flamingoes" textFill="#e747ff" />
         <Label fx:id="pageLabel" layoutX="14.0" layoutY="5.0" />
-        <MenuButton layoutX="672.0" layoutY="26.0" mnemonicParsing="false" text="My Account">
+        <MenuButton fx:id="btnUserMenu" layoutX="672.0" layoutY="26.0" mnemonicParsing="false" text="My Account">
             <items>
                 <MenuItem mnemonicParsing="false" onAction="#onLogoutButtonClick" text="Log Out" />
                 <MenuItem mnemonicParsing="false" onAction="#onEditButtonClick" text="Edit Account" />
@@ -37,7 +37,11 @@
                   <Label layoutX="58.0" layoutY="103.0" text="Start Hour - End Hour" />
                   <Label layoutX="126.0" layoutY="134.0" text="-" />
                   <Label layoutX="81.0" layoutY="164.0" text="Credit Hours" />
-                  <Spinner layoutX="71.0" layoutY="192.0" prefHeight="25.0" prefWidth="95.0" />
+                  <Spinner layoutX="71.0" layoutY="192.0" prefHeight="25.0" prefWidth="95.0" >
+                      <valueFactory>
+                          <SpinnerValueFactory.IntegerSpinnerValueFactory max="18" min="0" />
+                      </valueFactory>
+                  </Spinner>
                   <Label layoutX="95.0" layoutY="228.0" text="Meets: " />
                   <CheckBox layoutX="23.0" layoutY="251.0" mnemonicParsing="false" text="Monday" />
                   <CheckBox layoutX="130.0" layoutY="252.0" mnemonicParsing="false" text="Tuesday" />
@@ -72,6 +76,8 @@
                </children></AnchorPane>
         </items>
       </SplitPane>
+
+        <Button layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#back" text="Back" />
 
     </children>
 
